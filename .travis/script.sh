@@ -3,6 +3,6 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 set -x # Print commands and their arguments as they are executed.
 
-cd ~/motom001/linphone4raspberry/linphone-cmake-builder
+cd $start_path/linphone-cmake-builder
 python prepare.py python-raspberry
 make -C WORK/cmake-python-raspberry
