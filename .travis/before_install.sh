@@ -8,16 +8,14 @@ set -x # Print commands and their arguments as they are executed.
 sudo apt-get update -qq
 sudo apt-get install -y git rsync cmake
 
-export start_path=`pwd`
+mkdir /home/travis/raspberrypi
+mkdir /home/travis/raspberrypi/rootfs
+mkdir /home/travis/raspberrypi/tools
 
-mkdir ~/raspberrypi
-mkdir ~/raspberrypi/rootfs
-mkdir ~/raspberrypi/tools
+git clone https://github.com/raspberrypi/tools.git /home/travis/raspberrypi/tools
+cd /home/travis
+export PATH=$PATH:/home/travis/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
+export RASPBIAN_ROOTFS=/home/travis/raspberrypi/rootfs
 
-git clone https://github.com/raspberrypi/tools.git ~/raspberrypi/tools
-cd ~
-export PATH=$PATH:$HOME/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
-export RASPBIAN_ROOTFS=~/raspberrypi/rootfs
-
-cd ~/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
+cd /home/travis/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
 arm-linux-gnueabihf-gcc -v
