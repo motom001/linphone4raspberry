@@ -5,7 +5,7 @@ set -x # Print commands and their arguments as they are executed.
 
 sudo rsync -rl --delete-after --safe-links /{lib,usr} /home/travis/raspberrypi/rootfs
 
-cd ~/raspberrypi/rootfs/usr/lib
+cd /home/travis/raspberrypi/rootfs/usr/lib
 ln -s arm-linux-gnueabihf/libasound.so
 ln -s arm-linux-gnueabihf/libX11.so
 ln -s arm-linux-gnueabihf/libXv.so
