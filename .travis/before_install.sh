@@ -3,8 +3,10 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 set -x # Print commands and their arguments as they are executed.
 
+sudo dpkg --add-architecture i386
+sudo echo "foreign-architecture i386" > /etc/dpkg/dpkg.cfg.d/multiarch
 sudo apt-get update -qq
-sudo apt-get install -y git rsync cmake
+sudo apt-get install -y git rsync cmake libc6:i386 libncurses5:i386 libstdc++6:i386
 
 mkdir ~/raspberrypi
 mkdir ~/raspberrypi/rootfs
