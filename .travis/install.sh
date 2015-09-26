@@ -9,5 +9,3 @@ cd ~/raspberrypi/rootfs/usr/lib
 ln -s arm-linux-gnueabihf/libasound.so
 ln -s arm-linux-gnueabihf/libX11.so
 ln -s arm-linux-gnueabihf/libXv.so
-
-git clone git://git.linphone.org/linphone-cmake-builder.git ~/linphone-cmake-builder
