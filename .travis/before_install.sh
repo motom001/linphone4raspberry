@@ -3,7 +3,8 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 set -x # Print commands and their arguments as they are executed.
 
-sudo apt-get install git rsync cmake ia32-libs
+sudo apt-get update -qq
+sudo apt-get install -y git rsync cmake
 
 mkdir ~/raspberrypi
 mkdir ~/raspberrypi/rootfs
