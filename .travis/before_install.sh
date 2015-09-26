@@ -12,14 +12,14 @@ mkdir ~/raspberrypi
 mkdir ~/raspberrypi/rootfs
 mkdir ~/raspberrypi/tools
 
-echo "SET(CMAKE_SYSTEM_NAME Linux)" > ~/home/raspberrypi/pi.cmake
-echo "SET(CMAKE_SYSTEM_VERSION 1)" >> ~/home/raspberrypi/pi.cmake
-echo "SET(CMAKE_C_COMPILER $ENV{HOME}/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-gcc)" >> ~/home/raspberrypi/pi.cmake
-echo "SET(CMAKE_CXX_COMPILER $ENV{HOME}/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++)" >> ~/home/raspberrypi/pi.cmake
-echo "SET(CMAKE_FIND_ROOT_PATH $ENV{HOME}/raspberrypi/rootfs)" >> ~/home/raspberrypi/pi.cmake
-echo "SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)" >> ~/home/raspberrypi/pi.cmake
-echo "SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)" >> ~/home/raspberrypi/pi.cmake
-echo "SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)" >> ~/home/raspberrypi/pi.cmake
+echo "SET(CMAKE_SYSTEM_NAME Linux)" > ~/raspberrypi/pi.cmake
+echo "SET(CMAKE_SYSTEM_VERSION 1)" >> ~/raspberrypi/pi.cmake
+echo "SET(CMAKE_C_COMPILER $ENV{HOME}/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-gcc)" >> ~/raspberrypi/pi.cmake
+echo "SET(CMAKE_CXX_COMPILER $ENV{HOME}/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-g++)" >> ~/raspberrypi/pi.cmake
+echo "SET(CMAKE_FIND_ROOT_PATH $ENV{HOME}/raspberrypi/rootfs)" >> ~/raspberrypi/pi.cmake
+echo "SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)" >> ~/raspberrypi/pi.cmake
+echo "SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)" >> ~/raspberrypi/pi.cmake
+echo "SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)" >> ~/raspberrypi/pi.cmake
 
 git clone https://github.com/raspberrypi/tools.git ~/raspberrypi/tools
 echo export PATH=$PATH:$HOME/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin >> ~/.bashrc
