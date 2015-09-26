@@ -25,11 +25,11 @@ git clone https://github.com/raspberrypi/tools.git ~/raspberrypi/tools
 echo "export PATH=$PATH:$HOME/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin" >> ~/.bashrc
 echo "export RASPBIAN_ROOTFS=~/raspberrypi/rootfs" >> ~/.bashrc
 
-echo ------------------------------
-echo before update $PATH
 . ~/.bashrc
-echo after update $PATH
-echo ------------------------------
+echo RASPBIAN_ROOTFS: $RASPBIAN_ROOTFS
+echo ---------------------
+cat ~/.bashrc
+echo ---------------------
 
 ~/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf-gcc -v
 arm-linux-gnueabihf-gcc -v
