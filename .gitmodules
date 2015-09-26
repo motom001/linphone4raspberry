@@ -1,0 +1,3 @@
+[submodule "linphone-cmake-builder"]
+	path = linphone-cmake-builder
+	url = git://git.linphone.org/linphone-cmake-builder.git
