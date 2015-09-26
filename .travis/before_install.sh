@@ -22,10 +22,11 @@ echo "SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)" >> ~/raspberrypi/pi.cmake
 echo "SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)" >> ~/raspberrypi/pi.cmake
 
 git clone https://github.com/raspberrypi/tools.git ~/raspberrypi/tools
+cd ~
 echo "export PATH=$PATH:$HOME/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin" >> ~/.bashrc
 echo "export RASPBIAN_ROOTFS=~/raspberrypi/rootfs" >> ~/.bashrc
-
 . ~/.bashrc
+
 echo RASPBIAN_ROOTFS: $RASPBIAN_ROOTFS
 echo ---------------------
 cat ~/.bashrc
