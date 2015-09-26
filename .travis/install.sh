@@ -3,6 +3,7 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 set -x # Print commands and their arguments as they are executed.
 
+ssh-keyscan raspberry.travis.dev >> ~/.ssh/known_hosts
 rsync -rl --delete-after --safe-links pi@raspberry.travis.dev:/{lib,usr} $HOME/raspberrypi/rootfs
 
 cd ~/raspberrypi/rootfs/usr/lib
