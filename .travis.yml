@@ -1,5 +1,9 @@
 sudo: true
 language: python
+addons:
+  hosts:
+    - linphone4raspberry.motom001.raspberry.travis.dev
+    - raspberry.travis.dev
 python:
   - "2.7"
 before_install: ".travis/before_install.sh"
