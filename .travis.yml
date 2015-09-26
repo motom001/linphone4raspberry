@@ -1,0 +1,18 @@
+sudo: true
+language: python
+
+addons:
+  hosts:
+    - raspberry.travis.dev
+
+python:
+- 2.7
+
+before_install:
+- .travis/before_install.sh
+
+install:
+- .travis/install.sh
+
+script:
+- .travis/script.sh
