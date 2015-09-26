@@ -1,10 +1,6 @@
 sudo: true
 language: python
 
-addons:
-  hosts:
-    - raspberry.travis.dev
-
 python:
 - 2.7
 
