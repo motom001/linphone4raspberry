@@ -10,7 +10,7 @@ apt-get install -y git rsync cmake
 
 export BASE_PATH=/tmp/linphone4raspberrypi
 export RASPBIAN_ROOTFS=$BASE_PATH/rootfs
-export PATH=$PATH:$BASE_PATH/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
+export PATH=$PATH:$BASE_PATH/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
 
 mkdir $BASE_PATH
 mkdir $BASE_PATH/tools
@@ -19,12 +19,11 @@ mkdir $BASE_PATH/rootfs/usr
 mkdir $BASE_PATH/rootfs/usr/lib
 mkdir $BASE_PATH/linphone-cmake-builder
 
-
-git clone https://github.com/raspberrypi/tools.git $PATH:$BASE_PATH/tools
+git clone https://github.com/raspberrypi/tools.git $BASE_PATH/tools
 git clone git://git.linphone.org/linphone-cmake-builder.git $BASE_PATH/linphone-cmake-builder
 #rsync -rl --delete-after --safe-links /{lib,usr} $BASE_PATH/rootfs
 
-cd $BASE_PATH/rootfs/usr/lib
+#cd $BASE_PATH/rootfs/usr/lib
 #ln -s arm-linux-gnueabihf/libasound.so
 #ln -s arm-linux-gnueabihf/libX11.so
 #ln -s arm-linux-gnueabihf/libXv.so
