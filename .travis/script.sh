@@ -15,6 +15,8 @@ export PATH=$PATH:$BASE_PATH/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-ra
 mkdir $BASE_PATH
 mkdir $BASE_PATH/tools
 mkdir $BASE_PATH/rootfs
+mkdir $BASE_PATH/rootfs/usr
+mkdir $BASE_PATH/rootfs/usr/lib
 mkdir $BASE_PATH/linphone-cmake-builder
 
 
