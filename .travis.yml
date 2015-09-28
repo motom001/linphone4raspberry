@@ -6,6 +6,4 @@ addons:
     - raspberry.travis.dev
 python:
   - "2.7"
-before_install: ".travis/before_install.sh"
-install: "sudo .travis/install.sh"
 script: "sudo .travis/script.sh"
