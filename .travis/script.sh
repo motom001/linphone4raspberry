@@ -11,7 +11,9 @@ apt-get install -y git rsync cmake
 export BASE_PATH=/tmp/linphone4raspberrypi
 export RASPBIAN_ROOTFS=$BASE_PATH/rootfs
 export PATH=$PATH:$BASE_PATH/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
-
+echo ------------------
+echo $PATH
+echo ------------------
 mkdir $BASE_PATH
 mkdir $BASE_PATH/tools
 mkdir $BASE_PATH/rootfs
