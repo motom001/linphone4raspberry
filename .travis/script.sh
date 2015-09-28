@@ -5,7 +5,7 @@ set -x # Print commands and their arguments as they are executed.
 
 # sudo dpkg --add-architecture i386
 # sudo echo "foreign-architecture i386" > /etc/dpkg/dpkg.cfg.d/multiarch
-apt-get update && apt-get upgrade -y
+#apt-get update && apt-get upgrade -y
 apt-get install -y git rsync cmake
 
 export BASE_PATH=/tmp/linphone4raspberrypi
