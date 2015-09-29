@@ -6,7 +6,7 @@ set -x # Print commands and their arguments as they are executed.
 # sudo dpkg --add-architecture i386
 # sudo echo "foreign-architecture i386" > /etc/dpkg/dpkg.cfg.d/multiarch
 #apt-get update && apt-get upgrade -y
-apt-get install -y git rsync cmake
+apt-get install -y git rsync cmake kpartx
 
 export BASE_PATH=/tmp/linphone4raspberrypi
 export RASPBIAN_ROOTFS=$BASE_PATH/rootfs
@@ -20,6 +20,10 @@ mkdir $BASE_PATH/rootfs
 mkdir $BASE_PATH/rootfs/usr
 mkdir $BASE_PATH/rootfs/usr/lib
 mkdir $BASE_PATH/linphone-cmake-builder
+
+wget http://sourceforge.net/projects/minibian/files/2015-02-18-wheezy-minibian.tar.gz/download -O $BASE_PATH/wheezy-minibian.tar.gz
+sudo kpartx -a -v $BASE_PATH/wheezy-minibian.tar.gz
+exit 0
 
 git clone https://github.com/raspberrypi/tools.git $BASE_PATH/tools
 git clone git://git.linphone.org/linphone-cmake-builder.git $BASE_PATH/linphone-cmake-builder
